@@ -19,6 +19,8 @@ df['Wind2'] = df.Wind**2
 df['Wind3'] = df.Wind**3
 df['Wind4'] = df.Wind**4
 
+
+
 # Manually create 3 fold indexes. This can obviously be done more simply with scikit-learn
 idx1 = df[0: int(116/3)].index
 idx2 = df[int(116/3): int(2*116/3 ) ].index
@@ -37,7 +39,7 @@ def train_test_mse(model):
         res   = smf.ols(model, data = train   ).fit()
 
         score_train = mse( train.Ozone, res.fittedvalues )
-        score_test  =  mse( test.Ozone, res.predict(test)   )
+        score_test  = mse( test.Ozone, res.predict(test)   )
         mse_train.append( score_train  )
         mse_test.append( score_test )
         print("\t Fold {} MSE Train {:.3f} MSE Ttest {:.3f}".format(k, score_train, score_test))
