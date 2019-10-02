@@ -75,3 +75,11 @@ for alpha in np.linspace(0,2,11):
 
 for alpha in np.linspace(0,2,11):
     cv_mse(['Wind','Wind2','Temp','Temp2'], alpha)
+
+
+
+
+
+
+
+# ----------------------------------
