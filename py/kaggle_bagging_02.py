@@ -77,10 +77,13 @@ if __name__ == "__main__":
     # mdl = base_mdl
     mdl = BaggingRegressor(base_mdl,
             n_estimators = 200,
-            max_samples  = 1.0,
-            max_features = 1.0,
+
+            max_samples  = 0.7,
             bootstrap    = True,
+
+            max_features = 0.8,
             bootstrap_features = True,
+
             oob_score = True,
             random_state = 88)
 
